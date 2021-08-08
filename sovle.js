@@ -1,38 +1,8 @@
-const input = {
-    participant: [
-        ["leo", "kiki", "eden"],
-        ["marina", "josipa", "nikola", "vinko", "filipa"],
-        ["mislav", "stanko", "mislav", "ana"],
-    ],
-    completion: [
-        ["eden", "kiki"],
-        ["josipa", "filipa", "marina", "nikola"],
-        ["stanko", "ana", "mislav"],
-    ],
-    answer: ["leo", "vinko", "mislav"],
-};
+const input = {};
 
-function solution(participant, completion) {
-    const check = {};
-    participant.forEach((element) => (check[element] = 0));
-    participant.forEach((element) => check[element]++);
-    completion.forEach((element) => check[element]--);
-    return Object.keys(check).find((element) => check[element] > 0);
-}
+function solution() {}
 
-function test() {
-    input["answer"].forEach((element, idx) => {
-        const result = solution(
-            input["participant"][idx],
-            input["completion"][idx]
-        );
-        if (element === result) {
-            console.log("O");
-        } else {
-            console.log("X");
-        }
-    });
-}
+function test() {}
 
 let start = new Date(); // 시작
 test();
