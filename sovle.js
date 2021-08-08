@@ -17,7 +17,7 @@ function solution(participant, completion) {
     participant.forEach((element) => (check[element] = 0));
     participant.forEach((element) => check[element]++);
     completion.forEach((element) => check[element]--);
-    return Object.keys(check).filter((element) => check[element] > 0)[0];
+    return Object.keys(check).find((element) => check[element] > 0);
 }
 
 function test() {
