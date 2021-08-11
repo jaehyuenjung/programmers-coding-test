@@ -14,34 +14,28 @@ const input = {
 };
 
 function solution(genres, plays) {
-    let hashMap = {};
-    const hashMapDetail = {};
-    for (let i = 0; i < genres.length; i++) {
-        hashMap[genres[i]] =
-            (hashMap[genres[i]] ? hashMap[genres[i]] : 0) + plays[i];
-        const pre = hashMapDetail[genres[i]] ? hashMapDetail[genres[i]] : [];
-        pre.push({ id: i, playCount: plays[i] });
-        hashMapDetail[genres[i]] = pre;
-    }
-
-    hashMap = Object.fromEntries(
-        Object.entries(hashMap).sort(([, a], [, b]) => b - a)
-    );
-    return Object.keys(hashMap).reduce((result, key) => {
-        hashMapDetail[key]
-            .sort((a, b) => {
-                if (a.playCount !== b.playCount) {
-                    return b.playCount - a.playCount;
-                }
-                return a.id - b.id;
-            })
-            .forEach(({ id }, idx) => {
-                if (idx < 2) {
-                    result.push(id);
-                }
-            });
-        return result;
-    }, []);
+    const hashMap = {};
+    const hashMapDic = {};
+    genres.forEach((e, i) => (hashMap[e] = (hashMap[e] | 0) + plays[i]));
+    return genres
+        .map((genre, i) => ({ id: i, playCount: plays[i], genre }))
+        .sort((a, b) => {
+            if (a.genre !== b.genre) {
+                return hashMap[b.genre] - hashMap[a.genre];
+            }
+            if (a.playCount !== b.playCount) {
+                return b.playCount - a.playCount;
+            }
+            return a.id - b.id;
+        })
+        .filter(({ genre }) => {
+            if (hashMapDic[genre] >= 2) {
+                return false;
+            }
+            hashMapDic[genre] = (hashMapDic[genre] | 0) + 1;
+            return true;
+        })
+        .map(({ id }) => id);
 }
 
 function test() {
