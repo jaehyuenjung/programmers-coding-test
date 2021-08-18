@@ -13,37 +13,21 @@ function solution(bridge_length, weight, truck_weights) {
     let time = 0;
     let total_weight = 0;
     let queue = [];
-    const trucks = truck_weights.map((weight, idx) => ({
-        idx,
-        weight,
-        loc: 0,
-        is_gone: false,
-    }));
-    while (trucks.some((el) => !el["is_gone"])) {
-        const truck = trucks.find((el) => !el["is_gone"] && !el["loc"]);
-        queue = queue.map((el) => {
-            ++el["loc"];
-            return el;
-        });
 
-        if (queue.length && queue[0]["loc"] > bridge_length) {
-            const remove_truck = queue.shift();
-            total_weight -= remove_truck["weight"];
-            trucks[remove_truck["idx"]]["is_gone"] = true;
+    queue.push({ weight: 0, loc: 0 });
+    while (queue.length || truck_weights.length) {
+        if (queue[0]["loc"] === time) total_weight -= queue.shift()["weight"];
+        if (total_weight + truck_weights[0] <= weight) {
+            total_weight += truck_weights[0];
+            queue.push({
+                weight: truck_weights.shift(),
+                loc: time + bridge_length,
+            });
+        } else {
+            if (queue[0]) time = queue[0]["loc"] - 1;
         }
-        if (
-            trucks.some((el) => !el["is_gone"]) &&
-            truck &&
-            (queue.length == 0 || total_weight + truck["weight"] <= weight)
-        ) {
-            total_weight += truck["weight"];
-            truck["loc"]++;
-            queue.push(truck);
-        }
-
         time++;
     }
-
     return time;
 }
 
