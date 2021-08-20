@@ -12,4 +12,5 @@ Coding test solution list
 -   [x] [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)
 -   [x] [다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583)
 -   [x] [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)
--   [ ] [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
+-   [x] [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
+-   [ ] [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)
