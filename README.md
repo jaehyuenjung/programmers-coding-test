@@ -14,4 +14,5 @@ Coding test solution list
 -   [x] [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)
 -   [x] [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
 -   [x] [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)
--   [ ] [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
+-   [x] [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
+-   [ ] [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)
