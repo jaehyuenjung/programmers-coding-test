@@ -16,4 +16,5 @@ Coding test solution list
 -   [x] [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627)
 -   [x] [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
 -   [x] [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)
--   [ ] [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
+-   [x] [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
+-   [ ] [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)
