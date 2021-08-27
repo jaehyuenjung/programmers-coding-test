@@ -18,4 +18,5 @@ Coding test solution list
 -   [x] [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)
 -   [x] [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
 -   [x] [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)
--   [ ] [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+-   [x] [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+-   [ ] [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
